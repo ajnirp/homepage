@@ -1,0 +1,39 @@
+.content {
+  width: 710px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  background-color: #7DDEFF;
+  margin-top: 20px;
+  /*color: #000;*/
+}
+
+.header1 {
+  margin-bottom: 35px;
+}
+
+.navbar .container {
+	font-size: 14pt;
+	width: 960px;
+}
+
+.center.navbar .nav,
+.center.navbar .nav > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+    *zoom:1; /* hasLayout ie7 trigger */
+    vertical-align: top;
+    margin-right: 30px;
+}
+
+.center .navbar-inner {
+    text-align:center;
+}
+
+section {
+	padding-top: 50px;
+	font-size: 13pt;
+}

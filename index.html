@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta content="text/html"; charset="utf-8"/>
+		<title>Rohan Prinja</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="js/jquery-1.10.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script> -->
+		<script>
+		$(document).ready(function(){
+			var current = "welcome";
+			$("#projects-content").hide();
+			$("#contact-content").hide();
+			$("#welcome-content").hide();
+			$("#resume-content").hide();
+			$("#about-content").hide();
+			$("#home-button").click(function(){
+				$("#main-content").fadeOut(function(){
+					var welcomeText = $("#welcome-content").html();
+					current = "welcome"
+					$("#main-content").html(welcomeText);
+					$("#main-content").fadeIn();
+				});
+			});
+			$("#about-button").click(function(){
+				$("#main-content").fadeOut(function(){
+					var aboutText = $("#about-content").html();
+					current = "about"
+					$("#main-content").html(aboutText);
+					$("#main-content").fadeIn();
+				});
+			});
+			$("#projects-button").click(function(){
+				$("#main-content").fadeOut(function(){
+					var projectsText = $("#projects-content").html();
+					current = "projects"
+					$("#main-content").html(projectsText);
+					$("#main-content").fadeIn();
+				});
+			});
+			$("#contact-button").click(function(){
+				$("#main-content").fadeOut(function(){
+					var contactText = $("#contact-content").html();
+					current = "contact"
+					$("#main-content").html(contactText);
+					$("#main-content").fadeIn();
+				});
+			});
+			$("#resume-button").click(function(){
+				$("#main-content").fadeOut(function(){
+					var resumeText = $("#resume-content").html();
+					current = "resume"
+					$("#main-content").html(resumeText);
+					$("#main-content").fadeIn();
+				});
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<div class="navbar navbar-fixed-top center">
+		    <div class="navbar-inner">
+		    	<div class="container">
+					<header>
+						<ul class="nav">
+							<li><a href="#" id="home-button">Home</a>
+							<li><a href="#" id="about-button">About</a>
+							<li><a href="#" id="projects-button">Projects</a>
+							<li><a href="#" id="resume-button">Resume</a>
+							<li><a href="#" id="contact-button">Contact</a>
+						</ul>
+					</header>
+				</div>
+			</div>
+		</div>
+
+		<section>
+			<div id="main-content" class="content" style="display:block">
+				<h1 class="header1">Welcome to my homepage!</h1>
+				<p>I'm <strong>Rohan Prinja</strong>, a third-year student of computer science at IIT Bombay. I enjoy listening to <strong>music</strong>, <strong>coding</strong> for fun, learning foreign <strong>languages</strong> and making <strong>pixel art</strong>.</p>
+				<p>Click on the links in the headers for details on my projects, my resume and so on.</p>
+			</div>
+
+			<div id="welcome-content" class="content" style="display:block">
+				<h1 class="header1">Welcome to my homepage!</h1>
+				<p>I'm <strong>Rohan Prinja</strong>, a third-year student of computer science at IIT Bombay. I enjoy listening to <strong>music</strong>, <strong>coding</strong> for fun, learning foreign <strong>languages</strong> and making <strong>pixel art</strong>.</p>
+				<p>Click on the links in the headers for details on my projects, my resume and so on.</p>
+			</div>
+			
+			<div id="about-content" class="content" style="display:block">
+				<h1 class="header1">About</h1>
+				<img src="img/me2.JPG" style="float:left;margin-right:30px">
+        <p>Note to self: fill this in!</p>
+				
+			</div>
+
+			<div id="projects-content" class="content">
+				<h1 class="header1">Projects</h1>
+				<p>These are some projects I've worked on. Click on a project name for more information on it, click again to hide.</p>
+
+				<a class="accordion-toggle-collapsed btn btn-success" data-toggle="collapse" href="#monopoly-describe">Monopoly - the game</a>
+				<div id="monopoly-describe" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<p>A computer game version of the business simulation board game Monopoly for multiple human players. Code written in C++ for my <em>Intro to Programming</em> course project.</p>
+					</div>
+				</div>
+
+				<a class="accordion-toggle-collapsed btn btn-success" data-toggle="collapse" href="#chinese-checkers-describe">Chinese Checkers</a>
+				<div id="chinese-checkers-describe" class="accordion-body collapse">
+						<div class="accordion-inner">
+						<p>A computer game version of the board game Chinese Checkers. Supports human vs human (upto 6 human players), human vs AI or AI vs AI modes in which the user sits back and watches. You can also choose the precise AI algorithm to be used (Minimax, or Alpha-Beta pruning, or Randomized Play). Code written in <a href="http://racket-lang.org">Racket</a> for my <em>Abstractions and Paradigms in Programming</em> course project.</p>
+					</div>
+				</div>
+
+				<a class="accordion-toggle-collapsed btn btn-success" data-toggle="collapse" href="#conway-describe">Conway's Game of Life</a>
+				<div id="conway-describe" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<p>Program that runs a fixed nunmber of iterations of the classical Conway's Game of Life with a randomized starting board and then exits. Code written in Python.</p>
+					</div>
+				</div>
+
+				<a class="accordion-toggle-collapsed btn btn-success" data-toggle="collapse" href="#fmot-describe">FMoT (File Manager on Terminal)</a>
+				<div id="fmot-describe" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<p>Terminal-based file browser utility for Linux systems inspired by programs like <a href="http://moc.daper.net/">mocp</a> and <a href="http://ncmpcpp.rybczak.net/">ncmcpp</a>. Provides the functionality of a standard file browser, including browsing directories and opening, cutting, copying, pasting, renaming and deleting files. The program is controlled by the keyboard, with intuitive controls and a help system. Code written in C++ for my <em>Data Structures and Algorithms Lab</em> course project.</p>
+					</div>
+				</div>
+
+				<a class="accordion-toggle-collapsed btn btn-success" data-toggle="collapse" href="#rube-goldberg-describe">Rube Goldberg Machine Simulator</a>
+				<div id="rube-goldberg-describe" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<p>Realistic simulation of a Rube Goldberg Machine. A Rube Goldberg machine is a series of mechanical apparatuses that transfer energy among each other in some contrived way to finally execute a simple action. Code written in C++ with rendering and GUI in OpenGL. Used Box2D as the physics engine. Written for my <em>Software Systems Lab</em> course project.</p>
+					</div>
+				</div>
+
+				<a class="accordion-toggle-collapsed btn btn-success" data-toggle="collapse" href="#fft-describe">Fast Fourier Transform on FPGA</a>
+				<div id="fft-describe" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<p>Eight-point radix-2 DIF (Decimation in Frequency) Fast Fourier Transform implemented on Atlys Spartan 6 FPGA. User flips the DIP switches on the Spartan board to indicate input and presses a push button to input the next value. Output displayed on the LEDs above the DIP switches, separated by presses of the push button. Project code written in VHDL for my <em>Logic Design Lab</em> course project.</p>
+					</div>
+				</div>
+
+				<a class="accordion-toggle-collapsed btn btn-success" data-toggle="collapse" href="#ner-describe">Named Entity Recognition</a>
+				<div id="ner-describe" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<p>Given a text file containing the text of a novel, my program parses and identifies to a high degree of accuracy the various characters in the novel; their names, genders and status (protagonist, antagonist etc.). This problem is a subproblem for Named Entity Recognition, a fundamental natural language processing problem. Code written in Java.</p>
+					</div>
+				</div>
+
+				<a class="accordion-toggle-collapsed btn btn-success" data-toggle="collapse" href="#morph-describe">Image Morphing</a>
+				<div id="morph-describe" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<p>Implemented the Beier-Neely image algorithm for morphing one image into another with a GUI interface. Can specify the number of frames, the morph lines to be used, and the two images which we are changing between. Code written in Java.</p>
+					</div>
+				</div>
+
+				<a class="accordion-toggle-collapsed btn btn-success" data-toggle="collapse" href="#rtalk-describe">RTalk - Anonymous Web-based Chat</a>
+				<div id="rtalk-describe" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<p>Web-based chat app made as part of my internship at Chronus Corporation. Users start a private chat room (no sign-in/authentication of any kind) and invite their friends over to chat by sharing the randomized room URL. The chat room and all the associated chat logs are destroyed once everyone has left the room. Features include: ability to export chat history as as a text file, emoticon support, clickable links in-chat. Code written in Ruby on Rails.</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="contact-content" class="content">
+				<h1 class="header1">Contact</h1>
+				<p>Currently, I live in <strong>Room B001, Hostel 13, IIT Bombay</strong>. You can also email me or find me on most major social networks. On most sites I use (e.g. Duolingo, Project Euler, Reddit, last.fm, Github), I go by the handle <strong>wenderen</strong> (In case you're wondering, it's a meaningless name. I used it once and thought "hmm, this has a nice ring to it!").</p>
+				<p>I love listening to music and spend a lot of time on <a href="http://last.fm/user/wenderen">last.fm</a> in particular.</p>
+				<p>Email me at:</p>
+				<ul>
+					<li>rohan.prinja@gmail.com</li>
+					<li>rohan.prinja@chronus.com</li>
+					<li>rohan_prinja@iitb.ac.in</li>
+					<li>rohanp@cse.iitb.ac.in</li>
+				</ul>
+				<p><a href="https://github.com/wenderen">This</a> is my Github account.</p>
+				<p>I'm also on:</p>
+				<table>
+					<tr>
+						<td><a href="http://www.facebook.com/prinja.rohan"><img src="img/logos/facebook.png" id="fb-logo"></a></td>
+						<td><img src="img/logos/twitter.png" id="tw-logo"></td>
+						<td><img src="img/logos/linkedin.png" id="li-logo"></td>
+						<td><a href="http://www.youtube.com/user/ajnirp"><img src="img/logos/youtube.png" id="yt-logo"></a></td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="resume-content" class="content">
+				<h1 class="header1">Resume</h1>
+				<p>Note to self: fill this in!</p>
+				<p>Click <a href="#">here</a> to download my resume as a PDF file.</p>
+				<table class="table table-condensed table-striped">
+					<caption>SPIs in each semester</caption>
+					<thead>
+						<tr class="success">
+							<th>Semester</th>
+							<th>SPI</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Autumn 2011</td>
+							<td>9.41</td>
+						</tr>
+						<tr>
+							<td>Spring 2012</td>
+							<td>8.67</td>
+						</tr>
+						<tr>
+							<td>Autumn 2012</td>
+							<td>8.88</td>
+						</tr>
+						<tr>
+							<td>Spring 2013</td>
+							<td>8.97</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>For a list of projects I've worked on, click "Projects" in the header at the top of the page.</p>
+			</div>
+
+		</section>
+	</body>
+</html>
