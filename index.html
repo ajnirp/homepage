@@ -12,22 +12,24 @@
 		$(document).ready(function(){
 
 			var current = "welcome";
+
+			var welcomeText = $("#welcome-content").html();
+			$("#main-content").html(welcomeText);
+
 			$("#projects-content").hide();
 			$("#contact-content").hide();
 			$("#welcome-content").hide();
-			$("#main-content").hide();
-			$("#header-content").hide();
 			$("#resume-content").hide();
 			$("#about-content").hide();
 
-			$("#enter-site-button").click(function(){
-				$("#enter-site-content").fadeOut(function(){
-					var welcomeText = $("#welcome-content").html();
-					$("#main-content").html(welcomeText);
-					$("#header-content").fadeIn();
-					$("#main-content").fadeIn();
-				});
-			});
+			// $("#enter-site-button").click(function(){
+			// 	$("#enter-site-content").fadeOut(function(){
+			// 		var welcomeText = $("#welcome-content").html();
+			// 		$("#main-content").html(welcomeText);
+			// 		$("#header-content").fadeIn();
+			// 		$("#main-content").fadeIn();
+			// 	});
+			// });
 			$("#home-button").click(function(){
 				if (current != "welcome") {
 					$("#main-content").fadeOut(function(){
@@ -82,10 +84,10 @@
 		</script>
 	</head>
 	<body>
-		<div id="enter-site-content">
+		<!-- <div id="enter-site-content">
 			<h1>Welcome to my homepage</h1>
 			<a href="#" id="enter-site-button" class="btn btn-primary btn-large">Click to enter</a>
-		</div>
+		</div> -->
 		<div class="navbar navbar-fixed-top center" id="header-content">
 		<!-- <div class="navbar center"> -->
 		    <div class="navbar-inner">
@@ -97,7 +99,7 @@
 							<li><a href="#" id="projects-button">Projects</a>
 							<li><a href="#" id="resume-button">Resume</a>
 							<li><a href="#" id="contact-button">Contact</a>
-							<li><a href="#myModal" data-toggle="modal">Credits</a></li>
+							<li><a href="#myModal" data-toggle="modal" id="credits-button">Credits</a></li>
 						</ul>
 					</header>
 				</div>
@@ -121,6 +123,7 @@
         		<p>I love listening to music, mostly math/noise rock like Don Caballero, Dianogah and Polvo. I also like 65daysofstatic, Mogwai and Pele. <a href="http://www.last.fm/user/wenderen">This</a> is my last.fm account. Add me as a friend and let's talk music!</p>
         		<h2>Coding</h2>
         		<p>I like to code, and I especially enjoy dabbling in programming languages. I mostly code in Ruby and Python. I also know C/C++, Java, Scheme and VHDL. Currently I'm teaching myself <a href="http://www.jsoftware.com">J</a>, a fascinating little language that uses a very different paradigm (tacit programming) from most other languages.</p>
+        		<p>I'm also interested in web development, especially making beautiful websites with HTML5, CSS and Javascript. This home page was an interesting experiment for me and I learned a lot about web design in the process.</p>
         		<h2>Language Learning</h2>
         		<p>I took French as a second language in school, and learnt it for about seven years (kind of rusty now though!). I took a year of Chinese in my freshman year and a year of German in my sophomore year at IIT Bombay. I'm hoping to take the advanced German course next year!</p>
 				
