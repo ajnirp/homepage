@@ -7,7 +7,6 @@
 body {
   background-color: #7DDEFF;
   margin-top: 20px;
-  /*color: #000;*/
 }
 
 .header1 {
@@ -36,4 +35,13 @@ body {
 section {
 	padding-top: 50px;
 	font-size: 13pt;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #C1F2BB;
+  text-decoration: none;
 }
