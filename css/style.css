@@ -44,3 +44,17 @@ a {
 a:hover {
   text-decoration: none;
 }
+
+#enter-site-content {
+  margin-top: 200px;
+  text-align: center;
+}
+
+#enter-site-content h1 {
+  font-size: 70pt;
+  margin-bottom: 100px;
+}
+
+#enter-site-content a {
+  font-size: 20pt;
+}

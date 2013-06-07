@@ -10,12 +10,24 @@
 		<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script> -->
 		<script>
 		$(document).ready(function(){
+
 			var current = "welcome";
 			$("#projects-content").hide();
 			$("#contact-content").hide();
 			$("#welcome-content").hide();
+			$("#main-content").hide();
+			$("#header-content").hide();
 			$("#resume-content").hide();
 			$("#about-content").hide();
+
+			$("#enter-site-button").click(function(){
+				$("#enter-site-content").fadeOut(function(){
+					var welcomeText = $("#welcome-content").html();
+					$("#main-content").html(welcomeText);
+					$("#header-content").fadeIn();
+					$("#main-content").fadeIn();
+				});
+			});
 			$("#home-button").click(function(){
 				if (current != "welcome") {
 					$("#main-content").fadeOut(function(){
@@ -70,7 +82,11 @@
 		</script>
 	</head>
 	<body>
-		<div class="navbar navbar-fixed-top center">
+		<div id="enter-site-content">
+			<h1>Welcome to my homepage</h1>
+			<a href="#" id="enter-site-button" class="btn btn-primary btn-large">Click to enter</a>
+		</div>
+		<div class="navbar navbar-fixed-top center" id="header-content">
 		<!-- <div class="navbar center"> -->
 		    <div class="navbar-inner">
 		    	<div class="container">
@@ -81,8 +97,7 @@
 							<li><a href="#" id="projects-button">Projects</a>
 							<li><a href="#" id="resume-button">Resume</a>
 							<li><a href="#" id="contact-button">Contact</a>
-							<li><a href="#myModal" rel="popover" data-toggle="modal" id="help" data-content="How to use RTalk" -trigger="hover focus">Credits</a></li>
-	</div>
+							<li><a href="#myModal" data-toggle="modal">Credits</a></li>
 						</ul>
 					</header>
 				</div>
@@ -91,13 +106,10 @@
 
 		<section>
 			<div id="main-content" class="content" style="display:block">
-				<h1 class="header1">Welcome to my homepage!</h1>
-				<p>I'm <strong>Rohan Prinja</strong>, a third-year student of computer science at IIT Bombay. I enjoy listening to <strong>music</strong>, <strong>coding</strong> for fun, learning foreign <strong>languages</strong> and wasting time on the Internet.</p>
-				<p>Click on the links in the headers for details on my projects, my resume and so on.</p>
 			</div>
 
 			<div id="welcome-content" class="content" style="display:block">
-				<h1 class="header1">Welcome to my homepage!</h1>
+				<h1 class="header1">Welcome</h1>
 				<p>I'm <strong>Rohan Prinja</strong>, a third-year student of computer science at IIT Bombay. I enjoy listening to <strong>music</strong>, <strong>coding</strong> for fun, learning foreign <strong>languages</strong> and wasting time on the Internet.</p>
 				<p>Click on the links in the headers for details on my projects, my resume and so on.</p>
 			</div>
@@ -247,7 +259,9 @@
 				<h2 id="myModalLabel">Credits</h2>
 			</div>
 			<div class="modal-body">
-				<p>This site was built with the excellent Cosmo theme from <a href="http://bootswatch.com">Bootswatch.</a> I also used JQuery to transition between different sections. The inspiration for this site was the <a href="http://designmodo.com/flat-design-principles/">flat design</a> aesthetic.</p>
+				<p>This site was built with the excellent Cosmo theme from <a href="http://bootswatch.com">Bootswatch.</a> I also used JQuery to transition between different sections. The inspiration for this site was the <a href="http://designmodo.com/flat-design-principles/">flat design</a> aesthetic. The background is the 'Mooning' texture taken from <a href="http://subtlepatterns.com">Subtle Patterns</a></p>
+
+				<p>Like the site? The source code is on my <a href="https://github.com/wenderen/homepage">Github</a>.</p>
 			</div>
 			<div class="modal-footer">
 				<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Close</button>
